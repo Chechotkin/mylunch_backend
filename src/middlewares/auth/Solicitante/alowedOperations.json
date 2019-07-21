@@ -1,0 +1,22 @@
+{
+  "mutationsAllowed": [
+    {
+      "name": "loginSolicitante",
+      "needToken": false
+    },
+    {
+      "name": "createSolicitante",
+      "needToken": false
+    }
+  ],
+  "queriesAllowed": [
+    {
+      "name": "solicitantes",
+      "needToken": true
+    },
+    {
+      "name": "solicitante",
+      "needToken": true
+    }
+  ]
+}

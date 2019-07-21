@@ -1,0 +1,12 @@
+{
+  "bail": true,
+  "verbose": true,
+  "coverageDirectory": "__tests__/coverage",
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!<rootDir>/node_modules/",
+    "!<rootDir>/__tests__/utils/",
+    "!<rootDir>/src/seeds/"
+  ],
+  "testPathIgnorePatterns": ["/node_modules/", "__tests__/utils/", "<rootDir>/src/seeds/"]
+}

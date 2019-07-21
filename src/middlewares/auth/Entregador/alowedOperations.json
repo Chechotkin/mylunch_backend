@@ -1,0 +1,22 @@
+{
+  "mutationsAllowed": [
+    {
+      "name": "loginEntregador",
+      "needToken": false
+    },
+    {
+      "name": "createEntregador",
+      "needToken": false
+    }
+  ],
+  "queriesAllowed": [
+    {
+      "name": "entregador",
+      "needToken": true
+    },
+    {
+      "name": "entregadores",
+      "needToken": true
+    }
+  ]
+}
