@@ -36,6 +36,6 @@ if (process.env.NODE_ENV !== 'production') {
   app.get('/playground', expressPlayground({ endpoint: '/graphql' }))
 }
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log('Example app listening on port 3001!')
 })
