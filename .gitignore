@@ -6,3 +6,4 @@ development.db
 __tests__/database.sqlite
 __tests__/coverage
 .DS_Store
+dist/
