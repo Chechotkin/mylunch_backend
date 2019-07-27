@@ -33,6 +33,14 @@ export default class Pedido extends BaseModel {
         from: 'pedido.idSolicitante',
         to: 'solicitante.idSolicitante'
       }
+    },
+    entregador: {
+      relation: Model.BelongsToOneRelation,
+      modelClass: 'Entregador',
+      join: {
+        from: 'pedido.idEntregador',
+        to: 'entregador.idEntregador'
+      }
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+  "alowedEndpoints": [
+    {
+      "path": "/entregador/registrar",
+      "needToken": false,
+      "alowedMethods": ["POST"]
+    },
+    {
+      "path": "/entregador/login",
+      "needToken": false,
+      "alowedMethods": ["POST"]
+    }
+  ]
+}

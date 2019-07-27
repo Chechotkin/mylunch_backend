@@ -9,11 +9,20 @@ import cors from 'cors'
 
 import bodyparser from 'body-parser'
 
-// Auth Middleware
-import auth from './middlewares/auth'
+// AuthGraphql Middleware
+// import authGraphql from './middlewares/authGraphql'
 
 // Graphql Http
-import graphqlhttp from './graphql'
+// import graphqlhttp from './graphql'
+
+// AuthRest middleware
+import auth from './middlewares/authRest'
+
+
+import router from './routes'
+
+// Playground
+const expressPlayground = require('graphql-playground-middleware-express').default
 
 // Le arquivo .env.testing quando NODE_ENV = testing
 config(process.env.NODE_ENV === 'testing' ? { path: './.env.testing' } : null)
@@ -25,11 +34,13 @@ app.use(cors())
 
 app.use(bodyparser.json())
 
-// Playground
-const expressPlayground = require('graphql-playground-middleware-express').default
+// AuthGraphql Middleware
+// app.use('/graphql', authGraphql, graphqlhttp)
 
-// Auth Middleware
-app.use('/graphql', auth, graphqlhttp)
+router(app, auth)
+
+// AuthRest Middleware
+// app.use('/api', router.solicitante())
 
 // Graphql Playground
 if (process.env.NODE_ENV !== 'production') {

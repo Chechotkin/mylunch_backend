@@ -1,0 +1,19 @@
+{
+  "alowedEndpoints": [
+    {
+      "path": "/solicitante/registrar",
+      "needToken": false,
+      "alowedMethods": ["POST"]
+    },
+    {
+      "path": "/solicitante/login",
+      "needToken": false,
+      "alowedMethods": ["POST"]
+    },
+    {
+      "path": "/pedido/criar",
+      "needToken": true,
+      "alowedMethods": ["POST"]
+    }
+  ]
+}
