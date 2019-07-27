@@ -1,0 +1,19 @@
+{
+  "alowedEndpoints": [
+    {
+      "path": "/estabelecimento/registrar",
+      "needToken": false,
+      "alowedMethods": ["POST"]
+    },
+    {
+      "path": "/estabelecimento/login",
+      "needToken": false,
+      "alowedMethods": ["POST"]
+    },
+    {
+      "path": "/produto/criar",
+      "needToken": true,
+      "alowedMethods": ["POST"]
+    }
+  ]
+}

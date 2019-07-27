@@ -1,0 +1,17 @@
+exports.up = knex => knex.schema.createTable('estabelecimento', (table) => {
+  table.increments('idEstabelecimento').primary()
+  table.string('nome')
+  table.string('email')
+  table.string('senha')
+  table.string('cep')
+  table.string('estado')
+  table.string('cidade')
+  table.string('bairro')
+  table.string('rua')
+  table.string('numero')
+  table.string('complemento')
+  table.decimal('latitude', 9, 6)
+  table.decimal('longitude', 9, 6)
+})
+
+exports.down = knex => knex.schema.dropTable('estabelecimento')
