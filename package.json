@@ -29,7 +29,9 @@
     "objection-graphql": "^0.4.5",
     "pg": "^7.11.0",
     "sha256": "^0.2.0",
-    "sqlite3": "^4.0.9"
+    "sqlite3": "^4.0.9",
+    "swagger-jsdoc": "^3.3.0",
+    "swagger-ui-express": "^4.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

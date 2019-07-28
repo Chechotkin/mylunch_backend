@@ -22,14 +22,13 @@ const registrar = async (solicitante) => {
 const login = async (solicitante) => {
   let { email, senha } = solicitante
   let user = await Solicitante.query().where({ email }).first()
-
   if (!user) {
     let error = { message: 'Usuário não encontrado', statusCode: 400 }
     throw error
   }
 
   if (sha256(senha) !== user.senha) {
-    let error = { message: 'Senha incorreta', statusCode: 400 }
+    let error = { message: 'Senha incorreta', statusCode: 500 }
     throw error
   }
 
