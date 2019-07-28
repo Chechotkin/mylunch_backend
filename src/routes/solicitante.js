@@ -5,7 +5,7 @@ let router = express.Router()
 
 /**
  * @swagger
- * /add:
+ * /solicitante/registrar:
  *   post:
  *     summary: Registra solicitante
  *     description: Registra solicitante

@@ -54,20 +54,11 @@ router(app, auth)
 
 const swaggerDefinition = {
   info: {
-    title: 'MySQL Registration Swagger API',
+    title: 'MyLunch Swagger API',
     version: '1.0.0',
-    description: 'Endpoints to test the user registration routes',
+    description: 'Endpoints to test the MyLunch API',
   },
-  host: 'localhost:3001',
   basePath: '/',
-  securityDefinitions: {
-    bearerAuth: {
-      type: 'apiKey',
-      name: 'Authorization',
-      scheme: 'bearer',
-      in: 'header',
-    },
-  },
 }
 const options = {
   swaggerDefinition,

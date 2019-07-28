@@ -7,28 +7,39 @@ let router = express.Router()
  * @swagger
  * /produto/criar:
  *   post:
- *     summary: Cria Produto para establecimento logado
- *     description: Cria Produto para establecimento logado
+ *     summary: Criar produto
+ *     description: Criar produto vinculado ao estabelecimento logado
  *     tags:
  *       - Produto
- *     parameters:
- *       - in: body
- *         name: nome
- *         type: string
- *         required: true
- *       - in: body
- *         name: valor
- *         type: integer
- *         required: true
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               nome:
+ *                  type: string
+ *               valor:
+ *                  type: integer
+ *               descricao:
+ *                  type: string
  *     responses:
- *       201:
- *         description: Cria Produto para establecimento logado
+ *       200:
+ *         description: Produto criado
  *         schema:
  *           type: object
  *           properties:
- *             idProduto:
- *               type: integer
- *               description: id do produto criado
+ *             token:
+ *               type: string
+ *               description: token solicitante
+ *       400:
+ *         description: Usuário não econtrado | Senha incorreta
+ *         schema:
+ *           type: object
+ *           properties:
+ *             message:
+ *               type: string
+ *               description: Mensagem de erro
  */
 router.post('/criar', async (req, res) => {
   try {
